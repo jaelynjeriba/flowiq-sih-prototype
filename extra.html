@@ -72,25 +72,12 @@
 
     // --- MOCK DATA ---
     const INITIAL_JUNCTIONS = [
-  // --- Original 5 Junctions ---
-  { id: 'J-101', name: 'Anna Salai & Mount Rd', lat: 13.0604, lng: 80.2496, status: 'low', density: 28, vehicleCount: 140, avgSpeed: 42, waitTime: 22, signalTiming: { north: 35, east: 30, south: 35, west: 30 }, aiTiming: { north: 35, east: 30, south: 35, west: 30 } },
-  { id: 'J-204', name: 'T. Nagar Bus Terminus', lat: 13.0418, lng: 80.2341, status: 'severe', density: 88, vehicleCount: 480, avgSpeed: 12, waitTime: 95, signalTiming: { north: 45, east: 30, south: 35, west: 25 }, aiTiming: { north: 65, east: 20, south: 30, west: 20 } },
-  { id: 'J-309', name: 'Guindy Flyover Hub', lat: 13.0067, lng: 80.2020, status: 'moderate', density: 62, vehicleCount: 310, avgSpeed: 24, waitTime: 48, signalTiming: { north: 40, east: 40, south: 40, west: 30 }, aiTiming: { north: 50, east: 30, south: 45, west: 25 } },
-  { id: 'J-412', name: 'Velachery Bypass Jn', lat: 12.9750, lng: 80.2210, status: 'moderate', density: 55, vehicleCount: 260, avgSpeed: 28, waitTime: 38, signalTiming: { north: 30, east: 30, south: 30, west: 30 }, aiTiming: { north: 40, east: 25, south: 35, west: 20 } },
-  { id: 'J-505', name: 'OMR Tech Corridor Junction', lat: 12.9229, lng: 80.2312, status: 'low', density: 34, vehicleCount: 180, avgSpeed: 38, waitTime: 25, signalTiming: { north: 40, east: 35, south: 40, west: 35 }, aiTiming: { north: 40, east: 35, south: 40, west: 35 } },
-
-  // --- 10 NEW JUNCTION POINTS ---
-  { id: 'J-601', name: 'Koyambedu CMBT Jn', lat: 13.0694, lng: 80.1948, status: 'severe', density: 92, vehicleCount: 540, avgSpeed: 10, waitTime: 110, signalTiming: { north: 50, east: 40, south: 45, west: 30 }, aiTiming: { north: 75, east: 25, south: 35, west: 20 } },
-  { id: 'J-602', name: 'Kathipara Junction Grade Separator', lat: 13.0072, lng: 80.2053, status: 'moderate', density: 68, vehicleCount: 390, avgSpeed: 22, waitTime: 52, signalTiming: { north: 45, east: 45, south: 40, west: 35 }, aiTiming: { north: 55, east: 35, south: 45, west: 30 } },
-  { id: 'J-603', name: 'Porur Signal Hub', lat: 13.0382, lng: 80.1565, status: 'moderate', density: 64, vehicleCount: 340, avgSpeed: 20, waitTime: 58, signalTiming: { north: 40, east: 35, south: 40, west: 30 }, aiTiming: { north: 50, east: 25, south: 45, west: 25 } },
-  { id: 'J-604', name: 'Mylapore Luz Corner', lat: 13.0368, lng: 80.2676, status: 'low', density: 31, vehicleCount: 160, avgSpeed: 36, waitTime: 20, signalTiming: { north: 30, east: 30, south: 30, west: 30 }, aiTiming: { north: 30, east: 30, south: 30, west: 30 } },
-  { id: 'J-605', name: 'Central Station Flyover', lat: 13.0827, lng: 80.2757, status: 'severe', density: 85, vehicleCount: 470, avgSpeed: 14, waitTime: 88, signalTiming: { north: 45, east: 35, south: 40, west: 30 }, aiTiming: { north: 65, east: 25, south: 35, west: 25 } },
-  { id: 'J-606', name: 'Adyar Signal & Bridge Circle', lat: 13.0012, lng: 80.2565, status: 'low', density: 25, vehicleCount: 130, avgSpeed: 44, waitTime: 18, signalTiming: { north: 35, east: 35, south: 30, west: 30 }, aiTiming: { north: 35, east: 35, south: 30, west: 30 } },
-  { id: 'J-607', name: 'Thiruvanmiyur RTO Junction', lat: 12.9863, lng: 80.2588, status: 'moderate', density: 58, vehicleCount: 290, avgSpeed: 26, waitTime: 42, signalTiming: { north: 40, east: 30, south: 35, west: 30 }, aiTiming: { north: 45, east: 25, south: 40, west: 25 } },
-  { id: 'J-608', name: 'Vadapalani Arch & Metro Station', lat: 13.0500, lng: 80.2121, status: 'severe', density: 90, vehicleCount: 510, avgSpeed: 11, waitTime: 102, signalTiming: { north: 50, east: 30, south: 40, west: 30 }, aiTiming: { north: 70, east: 20, south: 35, west: 20 } },
-  { id: 'J-609', name: 'Tambaram Sanatorium Flyover', lat: 12.9279, lng: 80.1221, status: 'low', density: 38, vehicleCount: 210, avgSpeed: 40, waitTime: 24, signalTiming: { north: 35, east: 35, south: 35, west: 35 }, aiTiming: { north: 35, east: 35, south: 35, west: 35 } },
-  { id: 'J-610', name: 'Sholinganallur Junction (OMR x ECR Link)', lat: 12.9010, lng: 80.2279, status: 'moderate', density: 72, vehicleCount: 410, avgSpeed: 19, waitTime: 66, signalTiming: { north: 45, east: 40, south: 45, west: 35 }, aiTiming: { north: 55, east: 30, south: 50, west: 25 } }
-];
+      { id: 'J-101', name: 'Connaught Circle / Central Ring', status: 'low', density: 34, vehicleCount: 142, avgSpeed: 42, waitTime: 18, x: 25, y: 35 },
+      { id: 'J-204', name: 'Tech Corridor - North Hub', status: 'severe', density: 89, vehicleCount: 480, avgSpeed: 11, waitTime: 82, x: 65, y: 25 },
+      { id: 'J-309', name: 'Metro Flyover Junction', status: 'moderate', density: 62, vehicleCount: 290, avgSpeed: 24, waitTime: 45, x: 45, y: 55 },
+      { id: 'J-108', name: 'Old City Outer Gate', status: 'low', density: 28, vehicleCount: 115, avgSpeed: 48, waitTime: 14, x: 80, y: 70 },
+      { id: 'J-502', name: 'IT Park Expressway Ramp', status: 'moderate', density: 68, vehicleCount: 340, avgSpeed: 21, waitTime: 52, x: 30, y: 75 },
+    ];
 
     const INITIAL_BUSES = [
       { id: 'BUS-401', line: 'Route 12B (Express)', headingJunction: 'J-204', eta: '4 min', delay: '+6 min', load: '84%', priorityActive: false },
